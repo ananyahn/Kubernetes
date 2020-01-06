@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: voting-service
+  labels:
+    name: voting-service
+    app: demo-test-app
+spec:
+ type: LoadBalancer
+# externalIPs:
+#   - 172.31.20.98
+ ports:
+ - port: 80
+   targetPort: 80
+ selector:
+   name: voting-app-pod
+   app: demo-test-app

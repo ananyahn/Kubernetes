@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: result-app-pod1
+  labels:
+    name: result-app-pod1
+    app: demo-test-app
+spec:
+  containers:
+    - name: result-app1
+      image: dockersamples/examplevotingapp_result
+      ports:
+        - containerPort: 80
