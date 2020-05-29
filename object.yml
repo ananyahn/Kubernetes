@@ -18,7 +18,7 @@ spec:
       name: voting-app-pod
     spec:
       containers:
-        - image: 'ananya633093/strategies:${trigger["tag"]}'
+        - image: 'ananya633093/strategies:v6'
           name: voting-app
           ports:
             - containerPort: 80
